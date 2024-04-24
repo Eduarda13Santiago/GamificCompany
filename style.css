@@ -4,7 +4,7 @@
 }
 
 :root {
- --roxo-gamificC: #5A278C;
+    --roxo-gamificC: #5A278C;
 }
 
 * {
@@ -21,14 +21,92 @@ html {
     width: 80vw;
     max-width: 1400px;
 
+    /* margin: 20px-Espaçamento externo de 20px*/
+    /* margin: 20px-Espaçamento 20px na vertical, 10px na horizontal*/
+    /* margin: 20px-Espaçamento 20px para cima, 10px na horizontal,5px para baixo*/
+    /*margin: 20px 10px 5px 2px-Espaçamento 20px para cima,10px para a direita,5px para baixo,2px para a esquerda*/
+
     margin: 0 auto;
 }
 
 .banner {
     height: 100vh;
 
-    background-image: linear-gradient(90deg, rgba(161, 101, 220, 0)0%,rgba(168, 118, 216, 0.5772)43%, rgba(172, 131, 212, 1)75%, rgba(223, 191, 255, 1)93%), url();
+
+    background: rgb(181, 151, 206);
+    background-image: linear-gradient(90deg, rgba(181, 151, 206, 0.7579482476584384) 8%, rgba(113, 83, 142, 0.8) 30%, rgba(48, 33, 64, 0.8) 59%, rgba(29, 3, 54, 0.7999650543811274) 83%), url(img/controle\ remoto.png);
     background-repeat: no-repeat;
 
-    background-position: 165% 40%;
+    background-position: 120% 30%;
+}
+
+header {
+    height: 165px;
+}
+
+header button {
+    width: none;
+}
+
+header img {
+    width: 240px;
+}
+
+header .container-grid {
+    height: 120%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    width: 700px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    font-size: 20px;
+    font-family: 'Kdam Thmor Pro';
+
+    color: white;
+
+    text-decoration: underline transparent;
+    text-decoration-thickness: 2px;
+
+    transition: text-decoration 900ms ease;
+}
+
+.menu a:hover {
+    text-decoration-color: white;
+}
+
+
+
+#sobre {
+    height: 800px;
+    padding: 80px 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    text-align: left;
+}
+
+h2 {
+    font-family: 'Kdam Thmor Pro';
+    font-size: 30px;
+}
+
+#sobre p {
+    font-family: 'Ubuntu Mono';
+    font-size: 25px;
+   
+    text-align: left;
+
+    line-height: 2.1;
 }
