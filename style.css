@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Ubuntu Mono";
     src: url(fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
+
 }
 
 :root {
@@ -41,11 +42,11 @@ html {
 }
 
 header {
-    height: 165px;
+    height: 180px;
 }
 
 header button {
-    width: none;
+    display: none;
 }
 
 header img {
@@ -61,7 +62,7 @@ header .container-grid {
 }
 
 .menu {
-    width: 700px;
+    width: 900px;
 
     display: flex;
     justify-content: space-between;
@@ -79,7 +80,9 @@ header .container-grid {
     transition: text-decoration 900ms ease;
 }
 
-
+.menu a:hover {
+    text-decoration-color: white;
+}
 
 
 #sobre {
@@ -110,10 +113,12 @@ h2 {
 
 #formulario {
     text-align: left;
-    padding: 80px 10%;
+    padding: 50px 10%;
 
-    padding-bottom: 100px;
-    margin-bottom: 400px;
+    padding-bottom: 0px;
+    margin-bottom: 100px;
+
+
 }
 
 #formulario h2 {
@@ -169,7 +174,7 @@ h2 {
     height: 40px;
 
     color: grey;
-    background-color: #D7AFFF;
+    background-color: #F3D6FF;
 
 
     border-radius: 4px;
@@ -177,4 +182,107 @@ h2 {
     text-indent: 10px;
 
     outline: none;
+}
+
+.campo-descricao textarea {
+    color: black;
+
+    border: none;
+    background-color: #F3D6FF;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    padding: 10px;
+
+    resize: none;
+
+}
+
+.campo label,
+.campo-descricao label {
+    margin-bottom: 15px;
+}
+
+.campo input,
+.campo-descricao textarea {
+    font-family: 'Ubuntu Mono';
+    font-size: 17px;
+}
+
+.campo input::placeholder,
+.campo-descricao textarea ::placeholder {
+    color: #a0a0a0;
+}
+
+.campo input:focus,
+.campo-descricao textarea:focus {
+    outline: 2px solid #A279CB;
+}
+
+#formulario form button {
+    height: 40px;
+    width: 70%;
+
+    background-color: var(--roxo-gamificC);
+    color: white;
+   
+
+    border-radius: 1px;
+
+    font-size: 25px;
+    font-family: 'Ubuntu Mono';
+    font-weight: 700;
+    /* Bold */
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: background-color 500ms;
+}
+
+#formulario form button:hover {
+    background-color: #A279CB;
+
+}
+
+#atendimento {
+    height: 500px;
+
+
+    background-image: url(img/image\ 53.png);
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+.filtragem {
+    width: 100%;
+    height: 90%;
+
+    position: absolute;
+    top: 0px;
+
+
+}
+
+#atendimento .container-grid {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#portfolio a {
+    width: fit-content;
+
+    color: white;
+    background-color: white;
+    font-family: 'Kdam Thmor Pro';
+    font-size: 50px;
+
+    z-index: 1;
+
+    transition: 200ms;
 }
