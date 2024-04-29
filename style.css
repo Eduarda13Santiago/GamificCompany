@@ -133,7 +133,7 @@ h2 {
 
     display: center;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
 
     border-radius: 0px;
     background: rgb(90, 39, 140);
@@ -158,7 +158,7 @@ h2 {
 }
 
 .campo-descricao {
-    width: 90%;
+    width: 100%;
 
     text-align: left;
 
@@ -172,6 +172,7 @@ h2 {
 
 .campo input {
     height: 40px;
+    width: 111%;
 
     color: grey;
     background-color: #F3D6FF;
@@ -223,7 +224,7 @@ h2 {
 
 #formulario form button {
     height: 40px;
-    width: 70%;
+    width: 100%;
 
     background-color: var(--roxo-gamificC);
     color: white;
@@ -272,7 +273,8 @@ h2 {
 
     font-family: 'Kdam Thmor Pro';
     font-size: 30px;
-
+ 
+    text-decoration: none;
 
 }
 
@@ -444,4 +446,22 @@ h2 {
 
     cursor: pointer;
     transition: background-color 500ms;
+}
+
+#duvidas form button:hover {
+    background-color:#ECEAEA ;
+}
+
+footer {
+    height: 290px;
+
+    background-color: var(--roxo-gamificC);
+}
+
+footer .container-grid {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
