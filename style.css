@@ -25,7 +25,7 @@ html {
     /* margin: 20px-Espaçamento externo de 20px*/
     /* margin: 20px-Espaçamento 20px na vertical, 10px na horizontal*/
     /* margin: 20px-Espaçamento 20px para cima, 10px na horizontal,5px para baixo*/
-    /*margin: 20px 10px 5px 2px-Espaçamento 20px para cima,10px para a direita,5px para baixo,2px para a esquerda*/
+    /* margin: 20px 10px 5px 2px-Espaçamento 20px para cima,10px para a direita,5px para baixo,2px para a esquerda*/
 
     margin: 0 auto;
 }
@@ -252,7 +252,7 @@ h2 {
 }
 
 #atendimento {
-    height:  450px;
+    height: 350px;
 
 
     background-image: url(img/image\ 53.png);
@@ -498,11 +498,8 @@ footer {
 
 
 footer .container-grid {
-
-
     display: flex;
     justify-content: space-between;
-
 
 }
 
@@ -559,32 +556,274 @@ footer .container-grid {
 }
 
 @media screen and (max-width: 1300px) {
+
+    .banner {
+        background-size: cover;
+    }
+
     header {
         position: relative;
     }
 
+    header button {
+        width: 50px;
+
+        display: unset;
+
+        background: none;
+        border: none;
+    }
+
+    header svg {
+        fill: white;
+    }
+
+    nav.menu {
+        height: 500px;
+        width: 350px;
+
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+
+        background-color: #000000da;
+
+        position: absolute;
+        top: 165px;
+        right: 0px;
+    }
+
+
+
     .banner {
         height: 100vh;
 
-        background-position: 110% 20%;       
+        background-position: 110% 20%;
+    }
+
+    .card {
+        height: 450px;
+
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 22%;
+    }
+
+    .card img {
+        height: 200px;
+        width: 200px;
+
+    }
+
+    .card p {
+        font-size: 22px;
+
+        text-align: center;
+    }
+
+
 }
 
-.card {
-    height:  450px;
+@media screen and (max-width: 1080px) {
+    .container-cards {
+        flex-wrap: wrap;
+    }
 
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 22%;
+    .card {
+        height: 350px;
+
+
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 40%;
+    }
+
+    .redes-sociais {
+        align-items: center;
+    }
 }
 
-.card img {
-    height:  200px;
-    width: 200px;
+@media screen and (max-width: 800px) {
+
+    .banner {
+        background-size: cover;
+    }
+
+
+    .card {
+        flex-basis: 45%;
+    }
+
+    #sobre {
+        padding: 50px 15%;
+    }
+
+    h2 {
+        font-family: 'Kdam Thmor Pro';
+        font-size: 30px;
+    }
+
+    #sobre p {
+        font-family: 'Ubuntu Mono';
+        font-size: 20px;
+
+        text-align: left;
+
+        line-height: 2.0;
+    }
+
+
+
+    #formulario form {
+        width: 60%;
+
+
+    }
+
+    .redes-sociais p {
+
+        font-size: 23px;
+
+        padding: 30px 10%;
+
+    }
+
+    .icones-redes {
+        width: 300px;
+        height: 180px;
+
+        justify-content: space-between;
+
+    }
 
 }
 
-.card p{
+@media screen and (max-width: 700px) {
+
+    .banner {
+        background-size: cover;
+    }
+
+    #sobre {
+        height: unset;
+        margin-bottom: 40px;
+    }
+
+    #sobre h2 {
+        margin-bottom: 50px;
+    }
+
+    #sobre p {
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-family: 'Kdam Thmor Pro';
+        font-size: 25px;
+    }
+
+    .card p {
+        font-size: 19px;
+
+        text-align: center;
+    }
+
+
+    #porfolio a {
+        width: 20%;
+        text-align: center;
+    }
+
+
+    .redes-sociais p {
+        font-size: 20px;
+
+        padding: 30px 10%;
+
+    }
+
+    .icones-redes {
+        width: 300px;
+        height: 80px;
+
+        justify-content: space-between;
+
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .container-grid {
+        width: 90%;
+    }
+
+    header img {
+        width: 200px;
+    }
+
+    .banner {
+        background-size: cover;
+    }
+
+    nav.menu {
+        width: 100%;
+
+        display: none;
+    }
+
+    #sobre p {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+    }
+
+    #formulario form {
+        width: 70%;
+    }
+
+    .container-cards {
+        flex-wrap: nowrap;
+
+        gap: 40px;
+
+        overflow-x: auto;
+    }
+
+    .card {
+        height: 400px;
+        width: 280px;
+
+        flex-basis: unset;
+    }
+
+    .card:first-child {
+        margin-left: 30px;
+    }
+
+    .card:last-child {
+        margin-right: 30px;
+    }
+
+
+    #duvidas form {
+        width: 80%;
+    }
+
+    .redes-sociais p {
+        font-size: 10px;
+
+
+    }
+
+    .icones-redes {
+        width: 700px;
+        
+
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        align-items: center;
+    }
     
-}
-
-}
+    }
