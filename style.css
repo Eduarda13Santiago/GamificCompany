@@ -131,7 +131,7 @@ h2 {
     margin: 80px;
     padding: 60px 20px;
 
-    display: center;
+    display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -174,7 +174,7 @@ h2 {
     height: 40px;
     width: 100%;
 
-    color: black;
+    color: #a0a0a0;
     background-color: #F3D6FF;
 
 
@@ -186,7 +186,7 @@ h2 {
 }
 
 .campo-descricao textarea {
-    color: black;
+    color: #a0a0a0;
 
     border: none;
     background-color: #F3D6FF;
@@ -209,7 +209,7 @@ h2 {
 .campo input,
 .campo-descricao textarea {
     font-family: 'Kdam Thmor Pro';
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .campo input::placeholder,
@@ -252,15 +252,18 @@ h2 {
 }
 
 #atendimento {
-    height: 350px;
+    height: 200px;
 
+    background-image: url(img/imagem-roxa.jpg);
+    background-size: 250px;
 
-    background-image: url(img/image\ 53.png);
-    background-size: 100% 50%;
+    background-attachment: fixed;
 
+    position: relative;
 
-    background-repeat: no-repeat;
+    margin-bottom: 100px;
 
+    /*background-repeat: no-repeat;*/
 }
 
 #atendimento .container-grid {
@@ -342,7 +345,7 @@ h2 {
 }
 
 #portfolio {
-    height: 250px;
+    height: 200px;
 
     background-image: url(img/Portfolio.png);
     background-size: 100% 20%;
@@ -547,6 +550,7 @@ footer .container-grid {
 
 }
 
+
 .icones-redes a {
     color: white;
 }
@@ -602,6 +606,10 @@ footer .container-grid {
         background-position: 110% 20%;
     }
 
+    #atendimento {
+        height: 150px;
+    }
+
     .card {
         height: 450px;
 
@@ -620,6 +628,18 @@ footer .container-grid {
         font-size: 22px;
 
         text-align: center;
+    }
+
+    .icones-redes {
+        width: 400px;
+        height: 180px;
+
+        justify-content: space-between;
+
+    }
+
+    .icones-redes svg {
+        width: 70px;
     }
 
 
@@ -641,6 +661,18 @@ footer .container-grid {
 
     .redes-sociais {
         align-items: center;
+    }
+
+    .icones-redes {
+        width: 300px;
+        height: 180px;
+
+        justify-content: space-between;
+
+    }
+
+    .icones-redes svg {
+        width: 50px;
     }
 }
 
@@ -681,6 +713,10 @@ footer .container-grid {
 
     }
 
+    #atendimento {
+        height: 150px;
+    }
+
     .redes-sociais p {
 
         font-size: 23px;
@@ -695,6 +731,11 @@ footer .container-grid {
 
         justify-content: space-between;
 
+    }
+
+
+    .icones-redes svg {
+        width: 50px;
     }
 
 }
@@ -718,6 +759,10 @@ footer .container-grid {
         margin-bottom: 30px;
     }
 
+    #atendimento {
+        height: 150px;
+    }
+
     h2 {
         font-family: 'Kdam Thmor Pro';
         font-size: 25px;
@@ -737,18 +782,22 @@ footer .container-grid {
 
 
     .redes-sociais p {
-        font-size: 20px;
+        font-size: 25px;
 
         padding: 30px 10%;
 
     }
 
     .icones-redes {
-        width: 300px;
+        width: 250px;
         height: 80px;
 
         justify-content: space-between;
 
+    }
+
+    .icones-redes svg {
+        width: 40px;
     }
 }
 
@@ -778,6 +827,15 @@ footer .container-grid {
 
     }
 
+    #atendimento {
+        height: 100px;
+    }
+
+
+    #atendimento a {
+        font-size: 19px;
+    }
+
     #formulario form {
         width: 70%;
     }
@@ -795,6 +853,12 @@ footer .container-grid {
         width: 280px;
 
         flex-basis: unset;
+
+
+    }
+
+    .card p {
+        font-size: 22px
     }
 
     .card:first-child {
@@ -811,19 +875,105 @@ footer .container-grid {
     }
 
     .redes-sociais p {
-        font-size: 10px;
+        font-size: 19px;
 
 
     }
 
     .icones-redes {
-        width: 700px;
-        
+        width: 300px;
+        height: 80px;
 
         justify-content: space-between;
         box-sizing: border-box;
 
         align-items: center;
     }
-    
+
+
+   
+
+    .icones-redes svg {
+        width: 35px;
     }
+
+}
+
+@media screen and (max-width: 400px) {
+    .banner {
+
+        background-size: 500px;
+
+    }
+
+    header img {
+        width: 160px;
+    }
+
+    header svg {
+        width: 60px;
+    }
+
+    .conteudo-banner p {
+        font-size: 20px;
+    }
+
+    #sobre {
+        height: unset;
+        margin-bottom: 5px;
+
+        padding: 80px 10%
+    }
+
+    #sobre h2 {
+        margin-bottom: 30px;
+    }
+
+    #sobre p {
+        margin-bottom: 10px;
+
+        font-size: 15px;
+    }
+
+
+    #formulario h2 {
+        margin-bottom: 20px;
+    }
+
+    #formulario form {
+        width: 90%;
+
+        margin: 20px;
+    }
+
+
+    #portfolio a {
+        font-size: 20px;
+    }
+
+    #duvidas form {
+        width: 90%;
+
+        margin: 0 auto;
+        padding: 70px 0;
+    }
+
+    .redes-sociais p {
+        font-size: 19px;
+    }
+
+    .icones-redes {
+        width: 350px;
+
+
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        align-items: center;
+    }
+
+    .icones-redes svg {
+        width: 30px;
+    }
+
+}
