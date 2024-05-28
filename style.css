@@ -41,6 +41,8 @@ html {
     background-position: 120% 30%;
 }
 
+
+
 header {
     height: 180px;
 }
@@ -559,6 +561,14 @@ footer .container-grid {
     color: #8000ff;
 }
 
+.menu-fechado {
+    display: none;
+}
+
+#icone-barras {
+    display: none;
+}
+
 @media screen and (max-width: 1300px) {
 
     .banner {
@@ -890,9 +900,6 @@ footer .container-grid {
         align-items: center;
     }
 
-
-   
-
     .icones-redes svg {
         width: 35px;
     }
@@ -902,7 +909,7 @@ footer .container-grid {
 @media screen and (max-width: 400px) {
     .banner {
 
-        background-size: 500px;
+        background-size: 400px;
 
     }
 
@@ -959,7 +966,7 @@ footer .container-grid {
     }
 
     .redes-sociais p {
-        font-size: 19px;
+        font-size: 16px;
     }
 
     .icones-redes {
