@@ -44,6 +44,109 @@ onresize = () => {
     iconeX.style.display = "inline"
 }
 
+// Carrossel
+let banner = document.querySelector(".banner")
+
+// let slides = [0, 1, 2]
+// slides[0] -> primeiro-banner
+// slides[1] -> segundo-banner
+// slides[2] -> terceiro-banner
+
+let slides = [
+    "primeiro-banner",
+    "segundo-banner",
+    "terceiro-banner"
+]
+
+let slideAtual = 0
+
+banner.classList.add(slides[slideAtual])
+
+function mostrarProximoSlide() {
+    // Remover o slide anterior
+    banner.classList.remove(slides[slideAtual])
+
+    if (slideAtual < 2) {
+        // Somar 1 na variavel slideAtual
+        slideAtual++
+    } else {
+        //Voltar para o primeiro banner
+        slideAtual = 0
+    }
+
+    // Mostrar slide de acordo com o slide atual
+    banner.classList.add(slides[slideAtual])
+}
+
+function mostrarSlideAnterior() {
+    // Remover o slide anterior
+    banner.classList.remove(slides[slideAtual])
+
+    if (slideAtual > 0) {
+        //Subtrair 1 na varivael slide Atual
+        slideAtual--
+    } else {
+
+        slideAtual = 2
+    }
+
+
+    // Mostrar slide de acordo com o slide atual
+    banner.classList.add(slides[slideAtual])
+}
+
+
+function selecionarSlide(indiceSlide) {
+    //Remove o slide atual
+    banner.classList.remove(slides[slideAtual])
+
+    //Atualiza a variavel com o indice de slide selecionado 
+    slideAtual = indiceSlide
+
+    //Mostra o slide selecionado e salvo na variavel slideAtual
+    banner.classList.add(slides[slideAtual])
+}
+
+//Carregamento dinamico dos cases
+let listaCases = [
+
+]
+
+function renderizarCases() {
+    //Encontrar o elemento para inserir os cards 
+    let containerCards = document.querySelector(".container-cards")
+
+    //Variavel para guardar o html dos cases montados 
+    let template = ""
+
+    //Para cada case da listaCases
+    listaCases.forEach(cardCase => {
+        //Montar o html do card, passando os atributos do case 
+        template += `<div class="card">
+        <img src=${cardCase.imagem} alt="">
+        <p>${cardCase.descricao}</p>
+        <button>Ver mais</button>
+    </div>`
+
+    })
+
+    //Inserir html dos cases montados no elemento container-cards
+    containerCards.innerHTML = template
+}
+
+function carregarCases() {
+    //Método HTTP GET - Read/Leitura - Serve para mostrar um item ou lista de itens
+    fetch("http://localhost:3000/cases")
+        //Desetialization - Desserialização
+        .then((resposta) => resposta.json())
+        .then((dadosTratados) => {
+            console.log(dadosTratados)
+            listaCases = dadosTratados
+            renderizarCases()
+        })
+}
+
+
 function solicitarOrcamento(event) {
     //Pegar os valores dos inputs 
     let valorNome = document.getElementById("campo-nome").value
