@@ -55,7 +55,7 @@ let banner = document.querySelector(".banner")
 let slides = [
     "primeiro-banner",
     "segundo-banner",
-    "terceiro-banner"
+  
 ]
 
 let slideAtual = 0
@@ -66,7 +66,7 @@ function mostrarProximoSlide() {
     // Remover o slide anterior
     banner.classList.remove(slides[slideAtual])
 
-    if (slideAtual < 2) {
+    if (slideAtual < 1) {
         // Somar 1 na variavel slideAtual
         slideAtual++
     } else {
@@ -87,7 +87,7 @@ function mostrarSlideAnterior() {
         slideAtual--
     } else {
 
-        slideAtual = 2
+        slideAtual = 1
     }
 
 

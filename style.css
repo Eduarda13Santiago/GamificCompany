@@ -34,24 +34,20 @@ html {
     height: 100vh;
 
 
-    background: rgb(181, 151, 206);
-    background-image: linear-gradient(90deg, rgba(181, 151, 206, 0.7579482476584384) 8%, rgba(113, 83, 142, 0.8) 30%, rgba(48, 33, 64, 0.8) 59%, rgba(29, 3, 54, 0.7999650543811274) 83%), url(img/controle\ remoto.png);
     background-repeat: no-repeat;
 
     background-position: 120% 30%;
 }
 
 .primeiro-banner {
-    background-image: linear-gradient(90deg, rgba(181, 151, 206, 0.7579482476584384) 8%, rgba(113, 83, 142, 0.8) 30%, rgba(48, 33, 64, 0.8) 59%, rgba(29, 3, 54, 0.7999650543811274) 83%), url(img/controle\ remoto.png);
+    background-image: linear-gradient(90deg, rgba(189, 150, 221, 0.853) 8%, rgba(113, 83, 142, 0.8) 30%, rgba(48, 33, 64, 0.8) 59%, rgba(29, 3, 54, 0.7999650543811274) 83%), url(img/controle\ remoto.png);
 }
 
 .segundo-banner {
-    background-image: linear-gradient(90deg, rgba(181, 151, 206, 0.7579482476584384) 8%, rgba(113, 83, 142, 0.8) 30%, rgba(33, 33, 64, 0.8) 59%, rgba(29, 3, 54, 0.7999650543811274) 83%), url(img/controle\ remoto.png);
+    background-image: linear-gradient(90deg,  rgba(82, 137, 157, 0.67) 20%, rgba(38, 18, 170, 0.768) 69%, rgba(29, 3, 108, 0.867) 83%), url(img/controle\ remoto.png);
+
 }
 
-.terceiro-banner {
-    background-image: linear-gradient(90deg, rgba(181, 151, 206, 0.7579482476584384) 8%, rgba(113, 83, 142, 0.8) 30%, rgba(48, 33, 64, 0.8) 59%, rgba(29, 3, 54, 0.7999650543811274) 83%), url(img/controle\ remoto.png);
-}
 
 #botao-voltar,
 #botao-proximo {
@@ -71,15 +67,17 @@ html {
 }
 
 #botao-voltar {
-    left: 4%;
+    left: 5%;
+    top: 50%;   
 }
 
 #botao-proximo {
-    right: 4%;
+    right: 5%;
+    top: 50%;
 }
 
 .botoes {
-    width: 150px;
+    width: 80px;
 
     display: flex;
     justify-content: space-between;
@@ -643,6 +641,7 @@ footer .container-grid {
     header {
         position: relative;
     }
+   
 
     header button {
         width: 50px;
@@ -819,6 +818,7 @@ footer .container-grid {
 
     .banner {
         background-size: cover;
+        
     }
 
     #sobre {
@@ -890,9 +890,9 @@ footer .container-grid {
     }
 
     nav.menu {
-        width: 100%;
+        width: 60%;
 
-        display: none;
+       
     }
 
     #sobre p {
@@ -974,7 +974,9 @@ footer .container-grid {
 @media screen and (max-width: 400px) {
     .banner {
 
-        background-size: 400px;
+        background-size: cover;
+
+        height: 20px;
 
     }
 
